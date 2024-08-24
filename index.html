@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Projects Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Transition for Mobile Menu */
+    .menu-transition {
+      transition: max-height 0.3s ease-in-out;
+    }
+    /* Smooth Animation for Hover Effects */
+    .hover\:scale-105:hover {
+      transform: scale(1.05);
+    }
+    /* Smooth Shadow Transition */
+    .hover\:shadow-xl:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    /* Smooth Transition for Cards */
+    .transition-transform {
+      transition: transform 0.3s ease-in-out;
+    }
+    /* Smooth Scroll Behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header Section -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-gray-800">
+        <a href="#">MyLogo</a>
+      </div>
+      <!-- Hamburger Icon (Mobile) -->
+      <button id="menu-btn" class="block lg:hidden text-gray-800 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <!-- Navbar -->
+      <nav id="menu" class="hidden lg:flex space-x-6 lg:space-x-6 w-full lg:w-auto lg:block">
+        <a href="#home" class="block text-gray-800 hover:text-indigo-600 lg:inline transition-transform">Home</a>
+        <a href="#projects" class="block text-gray-800 hover:text-indigo-600 lg:inline transition-transform">Projects</a>
+        <a href="#about" class="block text-gray-800 hover:text-indigo-600 lg:inline transition-transform">About Me</a>
+        <a href="#contact" class="block text-gray-800 hover:text-indigo-600 lg:inline transition-transform">Contact Us</a>
+      </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden menu-transition max-h-0 overflow-hidden">
+      <nav class="flex flex-col items-center space-y-4 py-4">
+        <a href="#home" class="text-gray-800 hover:text-indigo-600 transition-transform">Home</a>
+        <a href="#projects" class="text-gray-800 hover:text-indigo-600 transition-transform">Projects</a>
+        <a href="#about" class="text-gray-800 hover:text-indigo-600 transition-transform">About Me</a>
+        <a href="#contact" class="text-gray-800 hover:text-indigo-600 transition-transform">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Myself Section -->
+  <section id="home" class="container mx-auto my-12 px-6">
+    <div class="flex flex-col lg:flex-row items-center bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
+      <!-- Image Section -->
+      <div class="w-full lg:w-1/2 flex justify-center p-4">
+        <img src="https://via.placeholder.com/256x256" alt="Dhanush" class="w-32 h-32 object-cover rounded-full border-4 border-indigo-600 transition-transform hover:scale-110">
+      </div>
+      <!-- Text Section -->
+      <div class="w-full lg:w-1/2 p-8 flex flex-col justify-center">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">Myself, Dhanush</h2>
+        <p class="mt-4 text-base lg:text-lg text-gray-600">
+          Passionate about coding, design, and technology, I strive to create beautiful and meaningful experiences through my work.
+        </p>
+        <a href="#about" class="mt-6 inline-block bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-indigo-700 transition duration-300 ease-in-out">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="container mx-auto my-12 px-6">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">About My Skills</h2>
+      <p class="mt-4 text-base lg:text-lg text-gray-600">
+        I have experience with a wide range of web development technologies. Here are some of the key skills I bring to the table:
+      </p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Skill Card 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg flex items-center space-x-4 transition-transform hover:scale-105 hover:shadow-xl">
+        <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">HTML & CSS</h3>
+          <p class="text-gray-600">Crafting semantic and well-structured web pages with responsive designs.</p>
+        </div>
+      </div>
+      <!-- Skill Card 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg flex items-center space-x-4 transition-transform hover:scale-105 hover:shadow-xl">
+        <div class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12h-6v6h-2v-6H5l7-7 7 7z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">JavaScript</h3>
+          <p class="text-gray-600">Implementing interactive features and dynamic content for enhanced user experience.</p>
+        </div>
+      </div>
+      <!-- Skill Card 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg flex items-center space-x-4 transition-transform hover:scale-105 hover:shadow-xl">
+        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4.5h3.5l-1.8 3.2-1.7-2.9V12h-1.5z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">React JS</h3>
+          <p class="text-gray-600">Building modern and scalable user interfaces with React's component-based architecture.</p>
+        </div>
+      </div>
+      <!-- Skill Card 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg flex items-center space-x-4 transition-transform hover:scale-105 hover:shadow-xl">
+        <div class="flex-shrink-0 w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">Tailwind CSS</h3>
+          <p class="text-gray-600">Utilizing utility-first CSS to rapidly build modern and responsive designs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container mx-auto my-12 px-6">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">Projects</h2>
+      <p class="mt-4 text-base lg:text-lg text-gray-600">
+        Here are a few of the projects I've been working on recently.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+        <h3 class="text-lg font-semibold text-gray-800">Weather Recommendation</h3>
+        <p class="text-gray-600 mt-2">
+          A weather-based recommendation app that suggests activities based on current weather conditions.
+        </p>
+        <a href="#" class="text-indigo-600 hover:underline mt-4 inline-block">View Project</a>
+      </div>
+      <!-- Project 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+        <h3 class="text-lg font-semibold text-gray-800">NewsMania</h3>
+        <p class="text-gray-600 mt-2">
+          An aggregated news platform that provides real-time updates on the latest happenings globally.
+        </p>
+        <a href="#" class="text-indigo-600 hover:underline mt-4 inline-block">View Project</a>
+      </div>
+      <!-- Project 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+        <h3 class="text-lg font-semibold text-gray-800">Spotify Clone</h3>
+        <p class="text-gray-600 mt-2">
+          A Spotify-like music streaming app with playlists, album, and artist features.
+        </p>
+        <a href="#" class="text-indigo-600 hover:underline mt-4 inline-block">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="container mx-auto my-12 px-6">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">Contact Us</h2>
+      <p class="mt-4 text-base lg:text-lg text-gray-600">
+        Feel free to reach out if you have any questions or inquiries!
+      </p>
+    </div>
+    <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <form action="https://formspree.io/f/movayvzn" method="POST" class="space-y-4">
+        <div>
+          <label for="name" class="block text-gray-600">Your Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600" placeholder="Enter your name">
+        </div>
+        <div>
+          <label for="email" class="block text-gray-600">Your Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600" placeholder="Enter your email">
+        </div>
+        <div>
+          <label for="message" class="block text-gray-600">Your Message</label>
+          <textarea id="message" name="message" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600" rows="4" placeholder="Enter your message"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Dhanush. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('max-h-0');
+      mobileMenu.classList.toggle('max-h-screen');
+    });
+  </script>
+</body>
+</html>
